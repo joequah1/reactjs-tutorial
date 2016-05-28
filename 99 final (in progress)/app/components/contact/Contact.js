@@ -6,15 +6,15 @@ class Contact extends React.Component {
     }
     
     componentWillMount () {
-        console.log('contact mounting');
+        //console.log('contact mounting');
     }
     
     componentDidMount () {
-        console.log('contact mounted');
+        //console.log('contact mounted');
     }
     
     componentWillUnmount () {
-        console.log('contact unmount');
+        //console.log('contact unmount');
     }
     
     render () {

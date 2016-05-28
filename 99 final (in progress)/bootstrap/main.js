@@ -10,9 +10,9 @@ import Login from '../app/components/login/Login';
 
 ReactDOM.render(
     <Router history={browserHistory}>
-        <Route path="/" component={App} >
+        <Route path="/" component={App}>
             <IndexRoute component={Home}/>
-            <Route path="/about" component={About} />
+            <Route path="/about" component={About} onEnter={About.willTransitionTo}/>
             <Route path="/contact-us" component={Contact} />
             <Route path="/login" component={Login} />
         </Route>

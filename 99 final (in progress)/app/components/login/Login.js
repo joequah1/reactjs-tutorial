@@ -11,6 +11,7 @@ class Login extends React.Component {
             password : ''
         }
         this.login = this.login.bind(this);
+        this.logout = this.logout.bind(this);
     }
     
     login (e) {
@@ -27,6 +28,10 @@ class Login extends React.Component {
         })
     }
     
+    logout () {
+        Auth.logout();
+    }
+    
     render () {
         return (
             <div>
@@ -40,6 +45,7 @@ class Login extends React.Component {
                         <input type="password"  ref="password" />
                     </div>
                     <button type="submit" onClick={this.login} >Login</button>
+                    <button type="button" onClick={this.logout} >Logout</button>
                 </form>
             </div>
         )

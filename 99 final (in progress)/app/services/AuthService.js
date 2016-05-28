@@ -1,6 +1,8 @@
 import when from 'when';
 import request from 'reqwest';
 
+import LoginAction from '../actions/LoginAction.js';
+
 class AuthService {
     
     login (username, password) {
@@ -18,9 +20,15 @@ class AuthService {
                 
                 console.log(jwt)
                 
+                LoginAction.loginUser(jwt);
+                
                 return true;
             })
         );
+    }
+    
+    logout () {
+        LoginAction.logoutUser();
     }
 }
 
